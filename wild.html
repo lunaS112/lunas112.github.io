@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Luna Sang's small field notes: mushrooms, northern lights, and night skies." />
+    <title>Wild notes · Luna Sang</title>
+    <style>
+      :root { --paper:#fbfdf7; --ink:#2d423f; --soft:#607069; --pine:#3f5d50; --rose:#b96b6b; --line:#dbe3d6; --night:#1d2736; --night-soft:#b8c4cc; --serif:Georgia, 'Times New Roman', serif; --sans:ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+      * { box-sizing:border-box; }
+      html { scroll-behavior:smooth; }
+      body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.55; }
+      .wrap { width:min(100% - 42px, 1200px); margin:0 auto; }
+      header { border-bottom:1px solid var(--line); }
+      .top { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+      .name, .back { color:var(--pine); text-decoration:none; }
+      .name { font-family:var(--serif); font-size:1.2rem; font-weight:700; letter-spacing:-.02em; }
+      .back { font-size:.9rem; font-weight:650; }
+      .back:hover, .name:hover { color:var(--rose); }
+      .intro { padding:82px 0 70px; }
+      .eyebrow { margin:0 0 12px; color:var(--rose); font-size:.78rem; font-weight:750; letter-spacing:.1em; text-transform:uppercase; }
+      h1, h2, p { margin-top:0; }
+      h1 { max-width:740px; margin-bottom:18px; font-family:var(--serif); font-size:clamp(3.15rem, 8vw, 6.4rem); font-weight:500; letter-spacing:-.065em; line-height:.95; }
+      .intro p:last-child { max-width:555px; margin-bottom:0; color:var(--soft); font-size:1.08rem; }
+      .section { padding:70px 0 84px; border-top:1px solid var(--line); }
+      .section-heading { display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:28px; }
+      h2 { margin-bottom:0; font-family:var(--serif); font-size:clamp(2rem,4vw,3rem); font-weight:500; letter-spacing:-.045em; line-height:1.05; }
+      .section-note { margin-bottom:0; color:var(--soft); font-size:.92rem; }
+      .gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px 18px; }
+      figure { margin:0; min-width:0; }
+      figure img { display:block; width:100%; aspect-ratio:4/5; border:1px solid var(--line); background:#e9eee4; object-fit:cover; transition:transform .25s ease; }
+      figure:hover img { transform:translateY(-3px); }
+      figcaption { display:flex; justify-content:space-between; gap:12px; padding-top:8px; color:var(--soft); font-size:.78rem; line-height:1.35; }
+      figcaption span:last-child { text-align:right; }
+      .night { background:var(--night); color:#f2f5f1; border-top:0; }
+      .night .section-note, .night figcaption { color:var(--night-soft); }
+      .night .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); gap:30px 20px; }
+      .night figure img { aspect-ratio:3/2; border-color:rgba(255,255,255,.16); background:#121822; }
+      .night figure:nth-child(2) img, .night figure:nth-child(3) img { object-position:center; }
+      .night .wide { grid-column:auto; }
+      footer { padding:28px 0; color:#738079; font-size:.82rem; }
+      footer .wrap { display:flex; justify-content:space-between; gap:18px; }
+      @media (max-width:680px) { .wrap { width:min(100% - 32px,600px); } .top { min-height:62px; } .intro { padding:58px 0 54px; } .section { padding:52px 0 64px; } .section-heading { display:block; margin-bottom:24px; } .section-note { margin-top:8px; } .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 12px; } .night .gallery { grid-template-columns:1fr; gap:24px; } footer .wrap { flex-direction:column; gap:3px; } }
+      @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } figure img { transition:none; } }
+    </style>
+  </head>
+  <body>
+    <header><div class="wrap top"><a class="name" href="index.html">Luna Sang</a><a class="back" href="index.html#about">← Back to home</a></div></header>
+    <main>
+      <section class="intro"><div class="wrap"><p class="eyebrow">Field notes</p><h1>A few things I found while staying wild.</h1><p>No species names, no claims—just small wonders along the trail, and the skies that made me look up.</p></div></section>
+      <section class="section"><div class="wrap"><div class="section-heading"><h2>Forest finds</h2><p class="section-note">A mushroom field notebook, without the taxonomy.</p></div><div class="gallery">
+        <figure><img src="assets/wild/IMG_7280.HEIC.jpg" alt="Clusters of brown mushrooms growing on a mossy tree" loading="lazy" /><figcaption><span>2025</span><span>Squamish, BC</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_7308.HEIC.jpg" alt="Pale coral-shaped mushroom growing among moss" loading="lazy" /><figcaption><span>2025</span><span>Squamish, BC</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_7699.HEIC.jpg" alt="Mushrooms clustered around a mossy stump" loading="lazy" /><figcaption><span>2025</span><span>West Vancouver, BC</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_7706.HEIC.jpg" alt="A large cluster of pale mushrooms on a tree trunk" loading="lazy" /><figcaption><span>2025</span><span>West Vancouver, BC</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_7718.HEIC.jpg" alt="Small pale mushrooms growing down a mossy log" loading="lazy" /><figcaption><span>2025</span><span>West Vancouver, BC</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_7726.HEIC.jpg" alt="Translucent yellow jelly mushrooms under a fallen branch" loading="lazy" /><figcaption><span>2025</span><span>West Vancouver, BC</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_7826.HEIC.jpg" alt="Dense mushrooms growing at the foot of a moss-covered tree" loading="lazy" /><figcaption><span>2025</span><span>Squamish, BC</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_7827.HEIC.jpg" alt="Golden coral-like mushroom in the forest" loading="lazy" /><figcaption><span>2025</span><span>Squamish, BC</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_7829.HEIC.jpg" alt="Two large brown mushrooms among ferns and forest leaves" loading="lazy" /><figcaption><span>2025</span><span>Squamish, BC</span></figcaption></figure>
+        <figure><img src="assets/wild/unnamed-3.JPG" alt="Bright red spotted mushroom among autumn leaves" loading="lazy" /><figcaption><span>Year unrecorded</span><span>Place unrecorded</span></figcaption></figure>
+        <figure><img src="assets/wild/unnamed-6.JPG" alt="A red spotted mushroom seen from above" loading="lazy" /><figcaption><span>Year unrecorded</span><span>Place unrecorded</span></figcaption></figure>
+        <figure><img src="assets/wild/662496e8d17d992535499e66df7b73.JPG" alt="A close-up of clustered brown mushrooms in green moss" loading="lazy" /><figcaption><span>Year unrecorded</span><span>Place unrecorded</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_1045.HEIC.jpg" alt="An orange mushroom held against a mossy forest background" loading="lazy" /><figcaption><span>2026</span><span>Squamish, BC</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_1141.HEIC.jpg" alt="Golden mushrooms growing in forest soil" loading="lazy" /><figcaption><span>2026</span><span>Squamish, BC</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_1142.HEIC.jpg" alt="A handful of golden forest mushrooms" loading="lazy" /><figcaption><span>2026</span><span>Squamish, BC</span></figcaption></figure>
+      </div></div></section>
+      <section class="section night"><div class="wrap"><div class="section-heading"><h2>Night skies</h2><p class="section-note">Aurora, the Milky Way, and a little motion through the dark.</p></div><div class="gallery">
+        <figure class="wide"><img src="assets/wild/123.jpg" alt="The Milky Way arching across a dark night sky" loading="lazy" /><figcaption><span>2019</span><span>Place unrecorded</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_0198.JPG" alt="A star-filled sky above a mountain valley with a bright streak" loading="lazy" /><figcaption><span>2021</span><span>Place unrecorded</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_4848.JPG" alt="The Milky Way over a dark landscape" loading="lazy" /><figcaption><span>Year unrecorded</span><span>Place unrecorded</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_9595.heic.jpg" alt="Green and pink northern lights over a dark mountain ridge" loading="lazy" /><figcaption><span>2024</span><span>Place unrecorded</span></figcaption></figure>
+        <figure><img src="assets/wild/_DSC8652.jpg" alt="Radiant green and magenta northern lights above evergreen trees" loading="lazy" /><figcaption><span>2024</span><span>Place unrecorded</span></figcaption></figure>
+        <figure class="wide"><img src="assets/wild/_DSC8661.jpg" alt="A bright multicolored northern lights display above evergreen trees" loading="lazy" /><figcaption><span>2024</span><span>Place unrecorded</span></figcaption></figure>
+      </div></div></section>
+    </main>
+    <footer><div class="wrap"><span>© 2026 Luna Sang</span><span>Simon Fraser University · Vancouver, BC · Stay wild.</span></div></footer>
+  </body>
+</html>
