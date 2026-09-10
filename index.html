@@ -53,18 +53,6 @@
       .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
       .tag { border: 1px solid #d9d0c5; border-radius: 999px; padding: 4px 10px; color: #58665d; font-size: .83rem; }
 
-      .research-note { max-width: 790px; margin-top: 34px; padding: 27px 29px; border-left: 4px solid var(--rose); background: var(--linen); }
-      .research-note .status { margin-bottom: 11px; color: var(--rose); font-size: .78rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
-      .research-note h3 { margin-bottom: 10px; }
-      .research-note p { margin-bottom: 12px; color: var(--soft-ink); }
-      .research-note p:last-child { margin-bottom: 0; font-size: .88rem; }
-
-      .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 30px; }
-      .project { padding: 21px 0; border-top: 1px solid var(--ink); }
-      .project .meta { margin-bottom: 9px; color: var(--rose); font-size: .78rem; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
-      .project h3 { margin-bottom: 8px; }
-      .project p { margin-bottom: 0; color: var(--soft-ink); font-size: .91rem; }
-
       .publication { display: grid; grid-template-columns: 78px minmax(0, 1fr); gap: 24px; padding: 24px 0; border-top: 1px solid var(--line); }
       .year { color: var(--rose); font-family: var(--serif); font-size: 1.2rem; font-weight: 700; }
       .publication h3 { margin-bottom: 7px; font-size: 1.22rem; }
@@ -92,7 +80,7 @@
         nav a { padding: 7px; }
         .hero { padding: 65px 0 58px; }
         main > section { padding: 58px 0; }
-        .projects, .details { grid-template-columns: 1fr; gap: 22px; }
+        .details { grid-template-columns: 1fr; gap: 22px; }
         .publication { grid-template-columns: 1fr; gap: 4px; }
         footer .wrap { flex-direction: column; gap: 3px; }
       }
@@ -106,11 +94,8 @@
         <button class="menu" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
         <nav id="navigation" aria-label="Main navigation">
           <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#projects">Projects</a>
           <a href="#publications">Publications</a>
           <a href="#contact">Contact</a>
-          <a href="assets/Dandan_Sang_CV.pdf" target="_blank" rel="noopener">CV ↗</a>
         </nav>
       </div>
     </header>
@@ -121,20 +106,15 @@
         <p class="eyebrow">Computing Science · MARS Lab</p>
         <h1>Dandan<br />“Luna” Sang</h1>
         <p class="intro">I study safe learning and control for robotic systems. My work brings together Hamilton–Jacobi reachability, learning-based control, and trustworthy AI.</p>
-        <div class="actions"><a class="button" href="#research">Research</a><a class="button quiet" href="assets/Dandan_Sang_CV.pdf" target="_blank" rel="noopener">Download CV</a></div>
       </div>
 
       <section id="about"><div class="wrap"><p class="section-label">About</p><h2>Research with safety in mind.</h2><div class="body-copy"><p>I am a PhD student in Computing Science at Simon Fraser University and a member of the Multi-Agent Robotic Systems Lab. I am interested in the boundary between formal safety guarantees and learning-based methods: how can autonomous systems act capably while respecting the limits that keep people and machines safe?</p></div><div class="tags" aria-label="Research interests"><span class="tag">Safe Learning</span><span class="tag">Control Theory</span><span class="tag">HJ Reachability</span><span class="tag">Deep Learning</span><span class="tag">Robotics</span><span class="tag">Trustworthy AI</span></div></div></section>
 
-      <section id="research"><div class="wrap"><p class="section-label">Featured research</p><h2>Hybrid learning for scalable HJ reachability</h2><div class="body-copy"><p>An ongoing MARS Lab project that uses a decomposed Hamilton–Jacobi solution as a useful learning prior, rather than an answer to copy.</p></div><article class="research-note"><p class="status">Ongoing · 2026–present</p><h3>Using approximate structure without inheriting its mistakes.</h3><p>Grid-based Hamilton–Jacobi solvers provide strong safety information but become impractical as a system’s dimension grows. This project uses a decomposed value function to initialize and guide a neural approximation, while retaining the HJ PDE residual as the correctness signal.</p><p>Gap-aware guidance reduces reliance on the teacher where a shared control budget can make decomposition inaccurate. The framework is studied across 4D, 6D, and 10D dynamical systems, connecting value-function accuracy to closed-loop control.</p><p>Manuscript in preparation. Public project materials will be added after release.</p></article></div></section>
-
-      <section id="projects"><div class="wrap"><p class="section-label">Selected projects</p><h2>Across robotics, data, and affective computing.</h2><div class="projects"><article class="project"><p class="meta">MARS Lab · 2024</p><h3>Robotic Follow-Ahead</h3><p>Supported model training, data preparation, and sensor-integrated testing for a robotic system that tracks human activity and follows ahead safely.</p></article><article class="project"><p class="meta">Rosie Lab · 2024</p><h3>BERSt Dataset Exploration</h3><p>Analyzed prosodically emotional speech from professional voice actors through feature extraction and visualization across emotion, affect, and distance.</p></article><article class="project"><p class="meta">SFU · 2024</p><h3>Emotion-Aware Chatbot</h3><p>Built a multimodal chatbot that interprets facial expressions and adapts its responses using emotion-recognition models and GPT-4V.</p></article></div></div></section>
-
       <section id="publications"><div class="wrap"><p class="section-label">Publications</p><h2>Selected publications</h2><article class="publication"><div class="year">2025</div><div><h3>Safe Learning in the Real World via Adaptive Shielding with Hamilton–Jacobi Reachability</h3><p>Michael Lu, Jashanraj Gosain, Luna Sang, and Mo Chen. <em>Learning for Dynamics and Control (L4DC)</em>, 2025.</p></div></article><article class="publication"><div class="year">2025</div><div><h3>BERSting at the Screams: A Benchmark for Distanced, Emotional, and Shouted Speech Recognition</h3><p>Paige Irene Tuttosi, Mantaj Dhillon, Luna Sang, Shane Eastwood, Poorvi Bhatia, Quang Minh Dinh, Avni Kapoor, Yewon Jin, and Angelica Lim. <em>Computer Speech &amp; Language</em>, 2025.</p></div></article></div></section>
 
-      <section><div class="wrap details"><div><h3>Awards &amp; honors</h3><ul><li><time>2025–2026</time><strong>Canada Graduate Scholarship — Master’s</strong><span>NSERC</span></li><li><time>2024</time><strong>Undergraduate Student Research Award</strong><span>NSERC · MARS Lab</span></li></ul></div><div><h3>Education</h3><ul><li><time>2026–present</time><strong>PhD in Computing Science</strong><span>Simon Fraser University</span></li><li><time>2025–2026</time><strong>MSc in Big Data</strong><span>Simon Fraser University</span></li><li><time>2022–2025</time><strong>BSc in Computing Science</strong><span>Simon Fraser University</span></li></ul></div></div></section>
+      <section><div class="wrap details"><div><h3>Awards &amp; honors</h3><ul><li><time>2025–2026</time><strong>Canada Graduate Scholarship — Master’s</strong><span>NSERC</span></li><li><time>2024</time><strong>Undergraduate Student Research Award</strong><span>NSERC · MARS Lab</span></li></ul></div><div><h3>Education</h3><ul><li><time>2026–present</time><strong>PhD in Computing Science</strong><span>Simon Fraser University</span></li><li><time>2025–2026</time><strong>MSc in Big Data</strong><span>Simon Fraser University</span></li><li><time>2022–2025</time><strong>BSc in Computing Science</strong><span>Simon Fraser University</span></li><li><time>2013–2014</time><strong>MSc in Finance</strong><span>Imperial College London</span></li></ul></div></div></section>
 
-      <section class="contact" id="contact"><div class="wrap"><p class="section-label">Contact</p><h2>Get in touch.</h2><p>I welcome conversations about research, collaboration, and work at the intersection of learning and control.</p><div class="actions"><a class="button" href="mailto:Luna_sang@sfu.ca">Email me</a><a class="button quiet" href="assets/Dandan_Sang_CV.pdf" target="_blank" rel="noopener">View CV</a></div></div></section>
+      <section class="contact" id="contact"><div class="wrap"><p class="section-label">Contact</p><h2>Get in touch.</h2><p>I welcome conversations about research, collaboration, and work at the intersection of learning and control.</p><div class="actions"><a class="button" href="mailto:Luna_sang@sfu.ca">Email me</a></div></div></section>
     </main>
     <footer><div class="wrap"><span>© 2026 Dandan “Luna” Sang</span><span>Simon Fraser University · Vancouver, BC</span></div></footer>
     <script>
