@@ -36,7 +36,7 @@
       .night .section-note, .night figcaption { color:var(--night-soft); }
       .night .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); gap:30px 20px; }
       .night figure img { aspect-ratio:3/2; border-color:rgba(255,255,255,.16); background:#121822; }
-      .night figure:nth-child(2) img, .night figure:nth-child(3) img { object-position:center; }
+      .night figure.portrait img { aspect-ratio:3/4; object-fit:contain; }
       .night .wide { grid-column:auto; }
       footer { padding:28px 0; color:#738079; font-size:.82rem; }
       footer .wrap { display:flex; justify-content:space-between; gap:18px; }
@@ -67,8 +67,8 @@
       </div></div></section>
       <section class="section night"><div class="wrap"><div class="section-heading"><h2>Night skies</h2><p class="section-note">Aurora, the Milky Way, and a little motion through the dark.</p></div><div class="gallery">
         <figure class="wide"><img src="assets/wild/123.jpg" alt="The Milky Way arching across a dark night sky" loading="lazy" /><figcaption><span>2019</span><span>Place unrecorded</span></figcaption></figure>
-        <figure><img src="assets/wild/IMG_0198.JPG" alt="A star-filled sky above a mountain valley with a bright streak" loading="lazy" /><figcaption><span>2021</span><span>Place unrecorded</span></figcaption></figure>
-        <figure><img src="assets/wild/IMG_4848.JPG" alt="The Milky Way over a dark landscape" loading="lazy" /><figcaption><span>Year unrecorded</span><span>Place unrecorded</span></figcaption></figure>
+        <figure class="portrait"><img src="assets/wild/IMG_0198.JPG" alt="A star-filled sky above a mountain valley with a bright streak" loading="lazy" /><figcaption><span>2021</span><span>Place unrecorded</span></figcaption></figure>
+        <figure class="portrait"><img src="assets/wild/IMG_4848.JPG" alt="The Milky Way over a dark landscape" loading="lazy" /><figcaption><span>Year unrecorded</span><span>Place unrecorded</span></figcaption></figure>
         <figure><img src="assets/wild/IMG_9595.heic.jpg" alt="Green and pink northern lights over a dark mountain ridge" loading="lazy" /><figcaption><span>2024</span><span>Place unrecorded</span></figcaption></figure>
         <figure><img src="assets/wild/_DSC8652.jpg" alt="Radiant green and magenta northern lights above evergreen trees" loading="lazy" /><figcaption><span>2024</span><span>Place unrecorded</span></figcaption></figure>
         <figure class="wide"><img src="assets/wild/_DSC8661.jpg" alt="A bright multicolored northern lights display above evergreen trees" loading="lazy" /><figcaption><span>2024</span><span>Place unrecorded</span></figcaption></figure>
