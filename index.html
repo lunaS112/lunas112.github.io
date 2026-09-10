@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dandan (Luna) Sang is a PhD student in Computing Science at Simon Fraser University, working on safe learning, control, and trustworthy AI." />
+    <title>Dandan (Luna) Sang — PhD Student, SFU</title>
+    <style>
+      :root {
+        --ink: #10233f;
+        --ink-soft: #40516a;
+        --paper: #f8fbff;
+        --white: #ffffff;
+        --line: #d8e2ef;
+        --blue: #1769e0;
+        --aqua: #1bb3ab;
+        --gold: #edae38;
+        --navy: #0b1b33;
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; }
+      a { color: inherit; }
+      a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+      .shell { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+      .topbar { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid rgba(216,226,239,.9); background: rgba(248,251,255,.93); backdrop-filter: blur(13px); }
+      .topbar-inner { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+      .brand { display: flex; align-items: center; gap: 11px; color: var(--navy); font-weight: 760; text-decoration: none; letter-spacing: -.02em; }
+      .brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; color: white; background: var(--blue); font-family: var(--serif); font-weight: 700; }
+      .nav { display: flex; align-items: center; gap: 20px; }
+      .nav a { color: var(--ink-soft); font-size: .9rem; font-weight: 650; text-decoration: none; }
+      .nav a:hover { color: var(--blue); }
+      .nav .cv-link { border: 1px solid var(--blue); border-radius: 999px; color: var(--blue); padding: 7px 13px; }
+      .nav .cv-link:hover { background: var(--blue); color: white; }
+      .menu { display: none; border: 0; padding: 8px; background: transparent; color: var(--ink); cursor: pointer; }
+
+      .hero { min-height: 600px; padding: 98px 0 80px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr); align-items: center; gap: 76px; }
+      .eyebrow { margin: 0 0 16px; color: var(--blue); font-size: .78rem; font-weight: 780; letter-spacing: .12em; text-transform: uppercase; }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 { max-width: 710px; margin-bottom: 22px; font-family: var(--serif); font-size: clamp(3.1rem, 7vw, 5.55rem); line-height: .98; letter-spacing: -.065em; font-weight: 600; }
+      .hero h1 em { color: var(--blue); font-style: normal; }
+      .lede { max-width: 640px; margin-bottom: 30px; color: var(--ink-soft); font-size: clamp(1.08rem, 2vw, 1.3rem); line-height: 1.62; }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+      .button { display: inline-flex; align-items: center; gap: 9px; border: 1px solid var(--blue); border-radius: 999px; padding: 11px 17px; background: var(--blue); color: white; font-size: .92rem; font-weight: 740; text-decoration: none; transition: transform .18s ease, background .18s ease; }
+      .button:hover { background: #0c57bd; transform: translateY(-2px); }
+      .button.secondary { border-color: var(--line); background: white; color: var(--ink); }
+      .button.secondary:hover { border-color: var(--ink); background: white; }
+
+      .research-orbit { position: relative; display: grid; place-items: center; min-height: 410px; overflow: hidden; border: 1px solid #cbd9e8; border-radius: 28px; background: linear-gradient(140deg, #0c2342 0%, #123766 58%, #156b8b 100%); box-shadow: 22px 27px 0 #dceafa; }
+      .research-orbit::before, .research-orbit::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.22); border-radius: 50%; }
+      .research-orbit::before { width: 355px; height: 170px; transform: rotate(-24deg); }
+      .research-orbit::after { width: 270px; height: 360px; transform: rotate(43deg); }
+      .orbital-label { position: absolute; z-index: 1; color: rgba(255,255,255,.68); font-size: .72rem; font-weight: 760; letter-spacing: .1em; text-transform: uppercase; }
+      .orbital-label.one { top: 52px; left: 43px; }
+      .orbital-label.two { right: 37px; bottom: 48px; }
+      .core { position: relative; z-index: 2; width: 184px; height: 184px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.75); border-radius: 50%; background: rgba(17,104,159,.56); color: white; text-align: center; box-shadow: 0 0 0 18px rgba(255,255,255,.055); }
+      .core strong { display: block; font-family: var(--serif); font-size: 1.56rem; line-height: 1.12; }
+      .core span { display: block; margin-top: 7px; color: #b9e9f5; font-size: .76rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+      .signal { position: absolute; z-index: 3; width: 13px; height: 13px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 7px rgba(237,174,56,.17); }
+      .signal.a { top: 112px; right: 76px; } .signal.b { bottom: 111px; left: 70px; background: #48ded1; box-shadow: 0 0 0 7px rgba(72,222,209,.17); }
+
+      section { padding: 96px 0; scroll-margin-top: 70px; }
+      section:nth-of-type(even) { background: var(--white); }
+      .section-top { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 35px; margin-bottom: 38px; }
+      .section-kicker { color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+      h2 { margin-bottom: 12px; font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.35rem); line-height: 1.04; letter-spacing: -.05em; font-weight: 600; }
+      .section-intro { max-width: 720px; margin-bottom: 0; color: var(--ink-soft); font-size: 1.08rem; }
+
+      .about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 56px; align-items: start; }
+      .identity { padding: 28px; border-radius: 20px; background: #e9f2ff; }
+      .identity .monogram { display: grid; place-items: center; width: 68px; height: 68px; margin-bottom: 18px; border-radius: 18px; background: var(--navy); color: white; font-family: var(--serif); font-size: 1.9rem; }
+      .identity h3 { margin-bottom: 4px; font-size: 1.06rem; }
+      .identity p { margin-bottom: 0; color: var(--ink-soft); font-size: .92rem; }
+      .about-copy { color: var(--ink-soft); font-size: 1.06rem; }
+      .interest-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 23px; }
+      .pill { border: 1px solid #c9dcf5; border-radius: 999px; padding: 6px 11px; background: #f6faff; color: #24508c; font-size: .83rem; font-weight: 680; }
+
+      .feature { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(260px, .82fr); gap: 46px; padding: clamp(27px, 5vw, 52px); border-radius: 24px; background: var(--navy); color: white; overflow: hidden; }
+      .status { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 17px; color: #b9e9f5; font-size: .78rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+      .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #57dbc9; box-shadow: 0 0 0 4px rgba(87,219,201,.14); }
+      .feature h3 { margin-bottom: 15px; font-family: var(--serif); font-size: clamp(1.85rem, 3vw, 2.75rem); line-height: 1.06; letter-spacing: -.04em; }
+      .feature p { max-width: 650px; color: #d2dfef; }
+      .feature .note { margin: 22px 0 0; color: #8ebbd3; font-size: .88rem; }
+      .method { display: grid; align-content: center; gap: 12px; }
+      .method-item { padding: 15px 17px; border: 1px solid rgba(185,233,245,.24); border-radius: 13px; background: rgba(255,255,255,.055); }
+      .method-item strong { display: block; color: #65e1d3; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+      .method-item span { display: block; margin-top: 2px; font-size: .94rem; }
+
+      .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+      .card { min-height: 228px; display: flex; flex-direction: column; padding: 25px; border: 1px solid var(--line); border-radius: 17px; background: var(--white); }
+      .card .card-meta { color: var(--blue); font-size: .77rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+      .card h3 { margin: 11px 0 10px; font-family: var(--serif); font-size: 1.45rem; line-height: 1.13; letter-spacing: -.03em; }
+      .card p { margin-bottom: 0; color: var(--ink-soft); font-size: .93rem; }
+      .card:nth-child(2) { background: #f0fbf9; border-color: #bfebe5; }
+      .card:nth-child(3) { background: #fff9ed; border-color: #f1ddae; }
+
+      .publication-list { border-top: 1px solid var(--line); }
+      .publication { display: grid; grid-template-columns: 118px minmax(0, 1fr); gap: 26px; padding: 28px 0; border-bottom: 1px solid var(--line); }
+      .publication-year { color: var(--blue); font-family: var(--serif); font-size: 1.35rem; font-weight: 700; }
+      .publication h3 { margin-bottom: 8px; font-family: var(--serif); font-size: 1.33rem; line-height: 1.28; letter-spacing: -.02em; }
+      .publication p { margin-bottom: 0; color: var(--ink-soft); font-size: .94rem; }
+
+      .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 62px; }
+      .subhead { padding-bottom: 14px; border-bottom: 2px solid var(--ink); font-size: .77rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+      .timeline { list-style: none; padding: 0; margin: 0; }
+      .timeline li { padding: 19px 0; border-bottom: 1px solid var(--line); }
+      .timeline time { display: block; margin-bottom: 4px; color: var(--blue); font-size: .79rem; font-weight: 770; }
+      .timeline strong { display: block; font-size: 1rem; }
+      .timeline span { display: block; color: var(--ink-soft); font-size: .92rem; }
+
+      .contact { padding: 82px 0; background: var(--blue) !important; color: white; }
+      .contact .section-kicker { color: #b7dbff; }
+      .contact h2 { max-width: 680px; margin-bottom: 18px; }
+      .contact p { max-width: 630px; margin-bottom: 27px; color: #dbeaff; font-size: 1.08rem; }
+      .contact .button { border-color: white; background: white; color: var(--blue); }
+      .contact .button.secondary { border-color: rgba(255,255,255,.65); background: transparent; color: white; }
+      footer { padding: 24px 0; background: var(--navy); color: #a9b8cc; font-size: .84rem; }
+      footer .shell { display: flex; justify-content: space-between; gap: 12px; }
+
+      @media (max-width: 820px) {
+        .shell { width: min(100% - 34px, 680px); }
+        .topbar-inner { min-height: 63px; }
+        .menu { display: block; }
+        .nav { display: none; position: absolute; top: 63px; right: 17px; left: 17px; padding: 17px; border: 1px solid var(--line); border-radius: 14px; background: white; box-shadow: 0 12px 28px rgba(20,43,78,.13); flex-direction: column; align-items: stretch; }
+        .nav.open { display: flex; }
+        .nav a { padding: 6px; }
+        .nav .cv-link { text-align: center; }
+        .hero { min-height: auto; grid-template-columns: 1fr; gap: 52px; padding: 68px 0; }
+        .research-orbit { min-height: 330px; max-width: 530px; width: 100%; }
+        section { padding: 68px 0; }
+        .section-top, .about-grid, .feature, .two-col { grid-template-columns: 1fr; gap: 26px; }
+        .cards { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 480px) {
+        h1 { font-size: 3.2rem; }
+        .research-orbit { border-radius: 20px; box-shadow: 12px 15px 0 #dceafa; }
+        .core { width: 156px; height: 156px; }
+        .publication { grid-template-columns: 1fr; gap: 7px; }
+        footer .shell { flex-direction: column; }
+      }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="shell topbar-inner">
+        <a class="brand" href="#top" aria-label="Dandan Sang home"><span class="brand-mark">LS</span><span>Dandan Sang</span></a>
+        <button class="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation">Menu</button>
+        <nav class="nav" id="navigation" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a class="cv-link" href="assets/Dandan_Sang_CV.pdf" target="_blank" rel="noopener">CV ↗</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <div class="shell hero">
+        <div>
+          <p class="eyebrow">PhD Student · Simon Fraser University</p>
+          <h1>Dandan<br /><em>“Luna”</em> Sang</h1>
+          <p class="lede">I work on safe learning and control for reliable robotic systems, bringing together Hamilton–Jacobi reachability, learning-based control, and trustworthy AI.</p>
+          <div class="actions">
+            <a class="button" href="#research">Explore my research <span aria-hidden="true">↓</span></a>
+            <a class="button secondary" href="assets/Dandan_Sang_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+        <div class="research-orbit" role="img" aria-label="An abstract visualisation of safe learning, control, and robotics research">
+          <span class="orbital-label one">safe learning</span>
+          <span class="orbital-label two">robotic control</span>
+          <span class="signal a"></span><span class="signal b"></span>
+          <div class="core"><div><strong>Trustworthy<br />Autonomy</strong><span>research focus</span></div></div>
+        </div>
+      </div>
+
+      <section id="about">
+        <div class="shell">
+          <div class="section-top"><div class="section-kicker">01 / About</div><div><h2>Building learning systems that know when safety matters.</h2><p class="section-intro">I am a PhD student in Computing Science at Simon Fraser University and a member of the Multi-Agent Robotic Systems Lab. My work studies how learning and control can be combined to make autonomous systems safer, more capable, and more dependable.</p></div></div>
+          <div class="about-grid">
+            <aside class="identity"><div class="monogram" aria-hidden="true">LS</div><h3>Based in Vancouver, BC</h3><p>School of Computing Science<br />Simon Fraser University</p></aside>
+            <div class="about-copy"><p>My background spans computer science, big data, and finance. I am especially interested in the boundary between formal safety guarantees and learning-based methods: how can a system act efficiently while still respecting the limits that keep people and machines safe?</p><div class="interest-list" aria-label="Research interests"><span class="pill">Safe Learning</span><span class="pill">Control Theory</span><span class="pill">HJ Reachability</span><span class="pill">Deep Learning</span><span class="pill">Robotics</span><span class="pill">Trustworthy AI</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="research">
+        <div class="shell">
+          <div class="section-top"><div class="section-kicker">02 / Featured research</div><div><h2>Hybrid learning for scalable HJ reachability</h2><p class="section-intro">An ongoing MARS Lab project that treats a decomposed Hamilton–Jacobi solution as a useful learning prior, rather than an answer to copy.</p></div></div>
+          <article class="feature">
+            <div><div class="status">Ongoing · 2026–present</div><h3>Using approximate structure without inheriting its mistakes.</h3><p>Grid-based Hamilton–Jacobi solvers provide strong safety information but become impractical as a system’s dimension grows. This project uses a cheap, dense decomposed value function to initialize and guide a neural approximation, while keeping the HJ PDE residual as the final correctness signal.</p><p>Its gap-aware guidance reduces reliance on the teacher precisely where a shared control budget can make decomposition inaccurate. The framework is studied across 4D, 6D, and 10D dynamical systems, connecting value-function accuracy to closed-loop control.</p><p class="note">Manuscript in preparation. Public project materials will be added after release.</p></div>
+            <div class="method" aria-label="Project approach"><div class="method-item"><strong>1 · Decompose</strong><span>Use a dense HJ solution as a prior</span></div><div class="method-item"><strong>2 · Guide</strong><span>Weight supervision by the subsystem gap</span></div><div class="method-item"><strong>3 · Verify</strong><span>Preserve PDE-based learning and closed-loop evaluation</span></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="shell">
+          <div class="section-top"><div class="section-kicker">03 / Selected projects</div><div><h2>Research that connects theory, data, and real systems.</h2><p class="section-intro">A selection of work across robotics, affective computing, and machine learning.</p></div></div>
+          <div class="cards">
+            <article class="card"><div class="card-meta">MARS Lab · 2024</div><h3>Robotic Follow-Ahead</h3><p>Supported model training, data preparation, and sensor-integrated testing for a robotic system that tracks human activity and follows ahead safely.</p></article>
+            <article class="card"><div class="card-meta">Rosie Lab · 2024</div><h3>BERSt Dataset Exploration</h3><p>Analyzed prosodically emotional speech from professional voice actors through feature extraction and visualization across emotion, affect, and distance.</p></article>
+            <article class="card"><div class="card-meta">SFU · 2024</div><h3>Emotion-Aware Chatbot</h3><p>Built a multimodal chatbot that interprets facial expressions and adapts its responses using emotion-recognition models and GPT-4V.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications">
+        <div class="shell">
+          <div class="section-top"><div class="section-kicker">04 / Publications</div><div><h2>Selected publications</h2><p class="section-intro">For a complete record of education and research experience, please see my CV.</p></div></div>
+          <div class="publication-list">
+            <article class="publication"><div class="publication-year">2025</div><div><h3>Safe Learning in the Real World via Adaptive Shielding with Hamilton–Jacobi Reachability</h3><p>Michael Lu, Jashanraj Gosain, Luna Sang, and Mo Chen. <em>Learning for Dynamics and Control (L4DC)</em>, 2025.</p></div></article>
+            <article class="publication"><div class="publication-year">2025</div><div><h3>BERSting at the Screams: A Benchmark for Distanced, Emotional, and Shouted Speech Recognition</h3><p>Paige Irene Tuttosi, Mantaj Dhillon, Luna Sang, Shane Eastwood, Poorvi Bhatia, Quang Minh Dinh, Avni Kapoor, Yewon Jin, and Angelica Lim. <em>Computer Speech &amp; Language</em>, 2025.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="background">
+        <div class="shell two-col">
+          <div><h2 class="subhead">Awards &amp; honors</h2><ul class="timeline"><li><time>2025–2026</time><strong>Canada Graduate Scholarship — Master’s</strong><span>NSERC</span></li><li><time>2024</time><strong>Undergraduate Student Research Award</strong><span>NSERC · MARS Lab</span></li></ul></div>
+          <div><h2 class="subhead">Education</h2><ul class="timeline"><li><time>2026–present</time><strong>PhD in Computing Science</strong><span>Simon Fraser University</span></li><li><time>2025–2026</time><strong>MSc in Big Data</strong><span>Simon Fraser University</span></li><li><time>2022–2025</time><strong>BSc in Computing Science</strong><span>Simon Fraser University</span></li></ul></div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="shell"><div class="section-kicker">05 / Contact</div><h2>Interested in safe, learning-enabled autonomy?</h2><p>I welcome conversations about research, collaboration, and work at the intersection of learning and control.</p><div class="actions"><a class="button" href="mailto:Luna_sang@sfu.ca">Email me</a><a class="button secondary" href="assets/Dandan_Sang_CV.pdf" target="_blank" rel="noopener">View CV</a></div></div>
+      </section>
+    </main>
+    <footer><div class="shell"><span>© 2026 Dandan “Luna” Sang</span><span>Simon Fraser University · Vancouver, BC</span></div></footer>
+    <script>
+      const button = document.querySelector('.menu');
+      const nav = document.querySelector('.nav');
+      button.addEventListener('click', () => { const open = nav.classList.toggle('open'); button.setAttribute('aria-expanded', open); button.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation'); });
+      nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => { nav.classList.remove('open'); button.setAttribute('aria-expanded', 'false'); button.setAttribute('aria-label', 'Open navigation'); }));
+    </script>
+  </body>
+</html>
