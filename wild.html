@@ -26,9 +26,9 @@
       .section-heading { display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:28px; }
       h2 { margin-bottom:0; font-family:var(--serif); font-size:clamp(2rem,4vw,3rem); font-weight:500; letter-spacing:-.045em; line-height:1.05; }
       .section-note { margin-bottom:0; color:var(--soft); font-size:.92rem; }
-      .gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px 18px; }
+      .gallery { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px 14px; }
       figure { margin:0; min-width:0; }
-      figure img { display:block; width:100%; aspect-ratio:4/5; border:1px solid var(--line); background:#e9eee4; object-fit:cover; transition:transform .25s ease; }
+      figure img { display:block; width:100%; aspect-ratio:1; border:1px solid var(--line); background:#e9eee4; object-fit:cover; transition:transform .25s ease; }
       figure:hover img { transform:translateY(-3px); }
       figcaption { display:flex; justify-content:space-between; gap:12px; padding-top:8px; color:var(--soft); font-size:.78rem; line-height:1.35; }
       figcaption span:last-child { text-align:right; }
@@ -42,7 +42,7 @@
       .night .panorama img { aspect-ratio:auto; height:auto; object-fit:contain; }
       footer { padding:28px 0; color:#738079; font-size:.82rem; }
       footer .wrap { display:flex; justify-content:space-between; gap:18px; }
-      @media (max-width:680px) { .wrap { width:min(100% - 32px,600px); } .top { min-height:62px; } .intro { padding:58px 0 54px; } .section { padding:52px 0 64px; } .section-heading { display:block; margin-bottom:24px; } .section-note { margin-top:8px; } .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 12px; } .night .gallery { grid-template-columns:1fr; gap:24px; } .night .panorama { grid-column:auto; } footer .wrap { flex-direction:column; gap:3px; } }
+      @media (max-width:680px) { .wrap { width:min(100% - 32px,600px); } .top { min-height:62px; } .intro { padding:58px 0 54px; } .section { padding:52px 0 64px; } .section-heading { display:block; margin-bottom:24px; } .section-note { margin-top:8px; } .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 10px; } .night .gallery { grid-template-columns:1fr; gap:24px; } .night .panorama { grid-column:auto; } footer .wrap { flex-direction:column; gap:3px; } }
       @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } figure img { transition:none; } }
     </style>
   </head>
@@ -51,13 +51,18 @@
     <main>
       <section class="intro"><div class="wrap"><p class="eyebrow">Field notes</p><h1>A few things I found while staying wild.</h1><p>No species names, no claims—just small wonders along the trail, and the skies that made me look up.</p></div></section>
       <section class="section"><div class="wrap"><div class="section-heading"><h2>Forest finds</h2><p class="section-note">A mushroom field notebook, without the taxonomy.</p></div><div class="gallery">
+        <figure><img src="assets/wild/IMG_3862.jpeg" alt="A round brown mushroom growing in a mossy forest" loading="lazy" /><figcaption><span>2026</span><span>Place unrecorded</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_3856.jpeg" alt="A close cluster of brown mushrooms growing on a mossy tree" loading="lazy" /><figcaption><span>2026</span><span>Place unrecorded</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_3841.jpeg" alt="A bright red mushroom on the forest floor" loading="lazy" /><figcaption><span>2026</span><span>Place unrecorded</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_3837.jpeg" alt="A large brown mushroom among ferns and forest branches" loading="lazy" /><figcaption><span>2026</span><span>Place unrecorded</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_3824.jpeg" alt="Dense clusters of mushrooms growing on a mossy tree trunk" loading="lazy" /><figcaption><span>2026</span><span>Place unrecorded</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_3815.jpeg" alt="A pale sculptural mushroom above moss" loading="lazy" /><figcaption><span>2026</span><span>Place unrecorded</span></figcaption></figure>
+        <figure><img src="assets/wild/IMG_3809.jpeg" alt="A large mushroom with a wavy brown cap in the forest" loading="lazy" /><figcaption><span>2026</span><span>Place unrecorded</span></figcaption></figure>
         <figure><img src="assets/wild/IMG_7280.HEIC.jpg" alt="Clusters of brown mushrooms growing on a mossy tree" loading="lazy" /><figcaption><span>2025</span><span>Squamish, BC</span></figcaption></figure>
         <figure><img src="assets/wild/IMG_7308.HEIC.jpg" alt="Pale coral-shaped mushroom growing among moss" loading="lazy" /><figcaption><span>2025</span><span>Squamish, BC</span></figcaption></figure>
-        <figure><img src="assets/wild/IMG_7699.HEIC.jpg" alt="Mushrooms clustered around a mossy stump" loading="lazy" /><figcaption><span>2025</span><span>West Vancouver, BC</span></figcaption></figure>
         <figure><img src="assets/wild/IMG_7706.HEIC.jpg" alt="A large cluster of pale mushrooms on a tree trunk" loading="lazy" /><figcaption><span>2025</span><span>West Vancouver, BC</span></figcaption></figure>
         <figure><img src="assets/wild/IMG_7718.HEIC.jpg" alt="Small pale mushrooms growing down a mossy log" loading="lazy" /><figcaption><span>2025</span><span>West Vancouver, BC</span></figcaption></figure>
         <figure><img src="assets/wild/IMG_7726.HEIC.jpg" alt="Translucent yellow jelly mushrooms under a fallen branch" loading="lazy" /><figcaption><span>2025</span><span>West Vancouver, BC</span></figcaption></figure>
-        <figure><img src="assets/wild/IMG_7826.HEIC.jpg" alt="Dense mushrooms growing at the foot of a moss-covered tree" loading="lazy" /><figcaption><span>2025</span><span>Squamish, BC</span></figcaption></figure>
         <figure><img src="assets/wild/IMG_7827.HEIC.jpg" alt="Golden coral-like mushroom in the forest" loading="lazy" /><figcaption><span>2025</span><span>Squamish, BC</span></figcaption></figure>
         <figure><img src="assets/wild/IMG_7829.HEIC.jpg" alt="Two large brown mushrooms among ferns and forest leaves" loading="lazy" /><figcaption><span>2025</span><span>Squamish, BC</span></figcaption></figure>
         <figure><img src="assets/wild/unnamed-3.JPG" alt="Bright red spotted mushroom among autumn leaves" loading="lazy" /><figcaption><span>Year unrecorded</span><span>Place unrecorded</span></figcaption></figure>
